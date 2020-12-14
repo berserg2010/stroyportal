@@ -1,3 +1,16 @@
+@import "variables";
+
 body {
+  padding: 0;
+  margin: 0;
+}
+.header_top__wrapper {
+  width: $desktop-width;
+  height: 32px;
+  margin: 0 auto;
   background-color: #FAFBFC;
+}
+.header_top__wrapper .point {
+  stroke: #708598;
+  stroke-width: 1;
 }

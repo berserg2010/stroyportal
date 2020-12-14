@@ -1,14 +1,12 @@
 <template>
-  <div id="app">
-    <HeaderTop />
-  </div>
+  <HeaderTop />
 </template>
 
 <script>
 import HeaderTop from "@/components/HeaderTop"
 
 export default {
-  name: 'App',
+  name: 'Base',
   components: {
     HeaderTop
   }

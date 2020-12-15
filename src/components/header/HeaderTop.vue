@@ -1,5 +1,4 @@
 <template>
-
   <div class="header_top__wrapper">
 
 <!--    <svg viewBox="0 0 12 14" width="12" height="14">-->
@@ -12,7 +11,7 @@
 
 <script>
 export default {
-  name: 'HeaderTop'
+  name: 'HeaderTop',
 }
 </script>
 

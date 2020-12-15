@@ -1,14 +1,14 @@
 <template>
-  <HeaderTop />
+  <Main />
 </template>
 
 <script>
-import HeaderTop from "@/components/HeaderTop"
+import Main from './components/Main.vue'
 
 export default {
   name: 'Base',
   components: {
-    HeaderTop
+    Main,
   }
 }
 </script>

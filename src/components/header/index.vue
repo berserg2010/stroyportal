@@ -1,6 +1,5 @@
 <template>
   <header>
-    sdf
     <HeaderTop />
     <HeaderBottom />
   </header>
@@ -12,10 +11,10 @@ import HeaderBottom from './HeaderBottom.vue'
 
 export default {
   name: 'Header',
-  comments: [
+  components: {
     HeaderTop,
     HeaderBottom,
-  ]
+  }
 }
 </script>
 

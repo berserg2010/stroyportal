@@ -1,17 +1,28 @@
 <template>
-  <div class="header_top__wrapper">
+  <div class="header_top">
+    <div class="wrapper">
+      <div class="location">
+        <Point />
+        <span class="location__text">Волгоградская область</span>
+      </div>
 
-<!--    <svg viewBox="0 0 12 14" width="12" height="14">-->
-<!--      <use class="point" xlink:href="img/point.svg"></use>-->
-<!--    </svg>-->
-
-    Волгоградская область
+      <ul class="top-menu">
+        <li>Тендеры</li>
+        <li>База подрядчиков</li>
+        <li class="">Другие сервисы</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
+import Point from '/src/assets/img/point.svg'
+
 export default {
   name: 'HeaderTop',
+  components: {
+    Point,
+  },
 }
 </script>
 

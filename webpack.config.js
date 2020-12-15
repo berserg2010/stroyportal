@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-// const path = require('path');
+const path = require('path');
 
 module.exports = {
   mode: 'development',
@@ -12,11 +12,9 @@ module.exports = {
       },
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
         }
       },
       {
@@ -39,11 +37,17 @@ module.exports = {
           },
         ],
       },
+
+      {
+        test: /\.svg$/,
+        use: [ 'babel-loader', 'vue-svg-loader' ]
+      }
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: path.resolve(__dirname, 'public', 'index.html'),
+      title: 'StroyPortal',
     }),
     new VueLoaderPlugin()
   ],

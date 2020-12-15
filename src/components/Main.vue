@@ -1,15 +1,13 @@
 <template>
-  <Header />
+  <main>
+    <h1>hello</h1>
+  </main>
 </template>
 
 <script>
-import Header from './header'
 
 export default {
-name: 'Main',
-  comments: {
-    Header,
-  }
+  name: 'Main',
 }
 </script>
 

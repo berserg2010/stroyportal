@@ -8,7 +8,8 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
-    'plugin:vue/essential'
+    'plugin:vue/essential',
+    'eslint:recommended'
   ],
   rules: {
     'no-console': ['error', { allow: ['warn', 'error', 'info'] }],

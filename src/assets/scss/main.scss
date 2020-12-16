@@ -3,23 +3,68 @@
 body {
   padding: 0;
   margin: 0;
+  color: $text-color;
+  font-family: Open Sans, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .wrapper {
   width: $desktop-width;
+  height: 100%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 .header_top {
   height: 32px;
   background-color: #FAFBFC;
 }
+.location {
+  display: flex;
+  align-items: center;
+}
 .location svg {
   stroke: #708598;
   stroke-width: 1;
 }
+.location__text {
+  margin-left: 8px;
+}
+.top-menu ul {
+  display: flex;
+  height: 100%;
+}
+.top-menu li {
+  align-self: center;
+  margin-right: 24px;
+}
+.top-menu li:last-child {
+  margin-right: 0;
+  padding-right: 16px;
+  position: relative;
+}
+.arrow-bottom {
+  position: absolute;
+  content: '';
+  top: 40%;
+  right: 0;
+}
 
 .header_bottom {
   height: 76px;
-  background-color: white;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: $border-color;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $border-color;
 }
 
 .user {

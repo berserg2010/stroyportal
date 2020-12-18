@@ -141,6 +141,20 @@ ul {
 }
 
 .content {
+
+  .wrapper {
+    display: block;
+  }
+  h1 {
+    margin-bottom: 24px;
+  }
+  .products_list {
+    padding-left: 16px;
+  }
+  .products_list li {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active) {

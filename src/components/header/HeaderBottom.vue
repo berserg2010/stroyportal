@@ -6,17 +6,18 @@
 
       <button class="menu-button"><Menu />Каталог</button>
 
-      <label for="search" class="visually-hidden">Поиск</label>
       <div class="search-wrapper">
-        <input v-model="search" id="search" type="search" name="search" placeholder="Хочу найти..." autocomplete="off" />
+        <label for="search" class="visually-hidden">Поиск</label>
+        <input
+          v-model="search"
+          v-on:input="onChange"
+          id="search"
+          type="search"
+          name="search"
+          placeholder="Хочу найти..."
+          autocomplete="off"
+        />
         <Search class="search-icon"/>
-      </div>
-      <div class="search_item">
-        <select v-model="selected">
-          <option v-for="option in options" :key="option.key" :value="option.value">
-            {{ option.text }}
-          </option>
-        </select>
       </div>
 
       <button class="list-button"><List class="list-icon"/>Список</button>
@@ -30,10 +31,11 @@
 </template>
 
 <script>
-import Logo from '../../assets/img/logo.svg'
-import Menu from '../../assets/img/menu.svg'
-import Search from '../../assets/img/search.svg'
-import List from '../../assets/img/list.svg'
+import Logo from 'img/logo.svg'
+import Menu from 'img/menu.svg'
+import Search from 'img/search.svg'
+import List from 'img/list.svg'
+
 
 export default {
   name: 'HeaderBottom',
@@ -42,6 +44,16 @@ export default {
     Menu,
     Search,
     List,
+  },
+  data() {
+    return {
+      search: '',
+    }
+  },
+  methods: {
+    onChange() {
+      this.$store.commit('updateSearchProduct', this.search)
+    }
   }
 }
 </script>

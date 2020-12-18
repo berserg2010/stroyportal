@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import Point from '../../assets/img/point.svg'
-import ArrowBottom from '../../assets/img/arrow_bottom.svg'
+import Point from 'img/point.svg'
+import ArrowBottom from 'img/arrow_bottom.svg'
 
 export default {
   name: 'HeaderTop',

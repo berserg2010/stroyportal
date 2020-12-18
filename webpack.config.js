@@ -2,8 +2,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const path = require('path');
 
+
 module.exports = {
   mode: 'development',
+  resolve: {
+    alias: {
+      src: path.resolve(__dirname, 'src'),
+      img: path.resolve(__dirname, 'src/assets/img')
+    }
+  },
   module: {
     rules: [
       {
@@ -46,7 +53,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'index.html'),
+      template: path.resolve(__dirname, 'src', 'index.html'),
       title: 'StroyPortal',
     }),
     new VueLoaderPlugin()

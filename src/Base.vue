@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <Main />
+    <Main :products-list="productsList" />
   </div>
 </template>
 
@@ -14,6 +14,16 @@ export default {
   components: {
     Main,
     Header,
+  },
+  data() {
+    return {
+      products: [],
+    }
+  },
+  computed: {
+    productsList() {
+      return this.$store.getters.PRODUCTS
+    }
   }
 }
 </script>
